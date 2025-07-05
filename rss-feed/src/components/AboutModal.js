@@ -129,8 +129,11 @@ const AboutModal = ({ isOpen, onClose, baseUrl }) => {
                     Use your email
                   </li>
                   <li>
-                    <code>atom:link href="your-domain.com/rss.xml"</code> →
-                    Update with your domain
+                    <code>
+                      atom:link
+                      href="https://rss-feedayushkapruwan.vercel.app/rss.xml"
+                    </code>{" "}
+                    → Update with your domain
                   </li>
                 </ul>
               </div>
@@ -144,8 +147,8 @@ const AboutModal = ({ isOpen, onClose, baseUrl }) => {
                   <code>server/index.js</code>
                 </li>
                 <li>
-                  <strong>Deploy to your preferred platform</strong> (Railway,
-                  Heroku, Vercel, etc.)
+                  <strong>Deploy to your preferred platform</strong> (Vercel,
+                  Railway, Heroku, etc.)
                 </li>
                 <li>
                   <strong>Set environment variables</strong>:
