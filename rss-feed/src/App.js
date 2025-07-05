@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 
@@ -20,6 +20,8 @@ function App() {
   const [message, setMessage] = useState({ type: "", text: "" });
   const [showHelp, setShowHelp] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+
+  const uploadFormRef = useRef();
 
   const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 
@@ -49,6 +51,10 @@ function App() {
         setTitle("");
         setDescription("");
         setMessage({ type: "success", text: "Episode uploaded successfully!" });
+        // Reset the file input element
+        if (uploadFormRef.current) {
+          uploadFormRef.current.resetFileInput();
+        }
       }
     } catch (error) {
       console.error("Upload error:", error);
@@ -87,6 +93,7 @@ function App() {
         />
 
         <UploadForm
+          ref={uploadFormRef}
           file={file}
           title={title}
           description={description}
