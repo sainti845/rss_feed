@@ -84,7 +84,7 @@ app.get("/rss.xml", (req, res) => {
         <enclosure url="${ep.fileUrl}" type="audio/mpeg" />
         <guid>${ep.fileUrl}</guid>
         <pubDate>${ep.pubDate}</pubDate>
-        <itunes:author>Satyam</itunes:author>
+        <itunes:author>Your Name</itunes:author>
         <itunes:explicit>no</itunes:explicit>
         <itunes:duration>00:02:00</itunes:duration> <!-- optional placeholder -->
       </item>`
@@ -98,16 +98,16 @@ app.get("/rss.xml", (req, res) => {
      xmlns:podcast="https://podcastindex.org/namespace/1.0"
      xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-    <atom:link href="https://rss-feed-production-109c.up.railway.app/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="${BASE_URL}/rss.xml" rel="self" type="application/rss+xml" />
       <title>My Podcast</title>
       <link>${BASE_URL}</link>
       <language>en-us</language>
       <description>A podcast where I explore the world of software, technology, and creative tools in depth every week.</description>
-      <itunes:author>Satyam</itunes:author>
+      <itunes:author>Ayush Kapruwan</itunes:author>
       <itunes:summary>Join me every week as I dive into the latest in software development, creative tools, and behind-the-scenes stories from tech creators.</itunes:summary>
       <itunes:owner>
-        <itunes:name>Satyam</itunes:name>
-        <itunes:email>satyamjsr999@gmail.com</itunes:email>
+        <itunes:name>Ayush Kapruwan</itunes:name>
+        <itunes:email>ayush.kapruwan845@gmail.com</itunes:email>
       </itunes:owner>
       <itunes:image href="${BASE_URL}/uploads/podcast-cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
